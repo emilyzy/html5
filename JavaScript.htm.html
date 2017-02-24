@@ -1,0 +1,59 @@
+<html>
+ <head>
+  <title>emily's web</title>
+  <script language="JavaScript">
+    alert("welcome to emily's web");
+    
+    <!--stamp a tabulation-->
+    document.write("<h3>this ia a tabulation</h3>"); 
+    var rows=10;
+    var cols=10;
+    document.write("<table border=1>");
+    for(i=0;i<rows;i++){
+    document.write("<tr>");
+    for(j=0;j<cols;j++){
+         document.write("<td>"+i*j+"</td>");
+      
+      }
+      document.write("</tr>");
+    }
+    document.write("</table>");
+  </script>
+ </head>
+
+ <body>
+  <script language="JavaScript">
+    <!--define a non parametric function-->
+    function one(i,j){
+      alert("you will get return table");
+      return i*j;
+    }
+    alert("ten result is:"+one(11,12));
+    <!--define array-->
+    function two(){
+      var array=new Array(5); 
+      for(i=0;i<array.length;i++){
+          array[i]=i;
+    
+        }
+      var str="array's content:";
+      for(i=0;i<array.length;i++){
+          str+=array[i]+".";
+        }
+      return str;
+    }
+    alert("the array is:"+two());
+    <!--3-->
+    function fun(){			
+			
+			var arr = new Array("MLDN","MLDNJAVA","LiXingHua");
+			var str = "数组的内容：" ;		
+			for(i=0;i<arr.length;i++){	
+				str += arr[i] + "、" ;	
+			}
+			return str ;			
+		}
+		alert(fun()) ;	
+  </script>
+ </body>
+</html>
