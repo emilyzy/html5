@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>         
+<head>
+	<title>login</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8">
+	<style type="text/css"></style>
+	<script type="text/javascript">
+		function check(register) {
+    	var username=register.username.value;
+    	var password=register.password.value;
+    	var password1=register.password1.value;
+
+    if (username=="") {
+    	alert("用户名不能为空");
+    	register.username.focus();
+    	register.username.select();
+    	return false;
+    }
+
+    else if(password==""){
+		alert("密码不能为空");
+		register.password.focus();
+		register.password.select();
+		return false;
+    }
+
+    else if(password.length<6){
+		alert("密码长度少于6位");
+		register.password.focus();
+		register.password.select();
+		return false;
+    }
+    else if(password!=password1){
+		alert("密码不一致");
+		register.password1.focus();
+		register.password1.select();
+		return false;
+    }
+    return true;
+}
+	</script>
+
+</head>
+<body>
+<form  action="#" method="post" name="register" onSubmit="return check(this)">
+	<table>
+		<tr>
+			<td>usear name:</td>
+			<td>
+				<input type="text" name="username" value="" size="30">
+				<font>please input your username</font>
+			</td>
+		</tr>
+		<tr>
+			<td> password :</td>
+			<td>
+				<input type="password" name="password" value="" size="30">
+
+				<font size="3px" color="red">please input your password</font>
+			</td>
+		</tr>
+		<tr>
+			<td> password :</td>
+			<td>
+				<input type="password" name="password1" value="" size="30">
+				<font>please input your password again</font>
+			</td>
+		</tr>
+		<tr align="center">
+			<td colspan="2">
+				<input type="submit" value="submit">
+				<input type="reset" value="reset">
+          		<input type="button" value="close" onclick="window.close()">
+          	</td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>
